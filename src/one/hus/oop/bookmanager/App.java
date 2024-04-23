@@ -41,7 +41,7 @@ public class App {
     }
 
     public static void init() {
-        String filePath = "C:\\Users\\Phong Vu\\IdeaProjects\\midterm\\src\\one.data\\books.csv";
+        String filePath = "C:\\Users\\Phong Vu\\IdeaProjects\\midterm\\src\\one\\data\\books.csv";
         readListData(filePath);
     }
 
