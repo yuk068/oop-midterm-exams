@@ -23,45 +23,33 @@ public class BreadStore {
 	 *  5 bánh mỳ ThincrustBread có cả cheese và olives.
 	 */
 	public void init() {
-		List<Bread> batch_1 = new ArrayList<>();
-		List<Bread> batch_2 = new ArrayList<>();
-		List<Bread> batch_3 = new ArrayList<>();
-		List<Bread> batch_4 = new ArrayList<>();
-		List<Bread> batch_5 = new ArrayList<>();
-		List<Bread> batch_6 = new ArrayList<>();
 		for (int i = 0; i < 5; i++) {
-			Bread bread1 = new ThickcrustBread();
-			bread1 = new Cheese(bread1);
-			batch_1.add(bread1);
+			Bread thickcrustBreadCheese = new ThickcrustBread();
+			thickcrustBreadCheese = new Cheese(thickcrustBreadCheese);
+			breads.add(thickcrustBreadCheese);
 
-			Bread bread2 = new ThickcrustBread();
-			bread2 = new Olives(bread2);
-			batch_2.add(bread2);
+			Bread thickcrustBreadOlives = new ThickcrustBread();
+			thickcrustBreadOlives = new Olives(thickcrustBreadOlives);
+			breads.add(thickcrustBreadOlives);
 
-			Bread bread3 = new ThickcrustBread();
-			bread3 = new Cheese(bread3);
-			bread3 = new Olives(bread3);
-			batch_3.add(bread3);
+			Bread thickcrustBreadCheeseOlives = new ThickcrustBread();
+			thickcrustBreadCheeseOlives = new Cheese(thickcrustBreadCheeseOlives);
+			thickcrustBreadCheeseOlives = new Olives(thickcrustBreadCheeseOlives);
+			breads.add(thickcrustBreadCheeseOlives);
 
-			Bread bread4 = new ThincrustBread();
-			bread4 = new Cheese(bread4);
-			batch_4.add(bread4);
+			Bread thincrustBreadCheese = new ThincrustBread();
+			thincrustBreadCheese = new Cheese(thincrustBreadCheese);
+			breads.add(thincrustBreadCheese);
 
-			Bread bread5 = new ThincrustBread();
-			bread5 = new Olives(bread5);
-			batch_5.add(bread5);
+			Bread thincrustBreadOlives = new ThincrustBread();
+			thincrustBreadOlives = new Olives(thincrustBreadOlives);
+			breads.add(thincrustBreadOlives);
 
-			Bread bread6 = new ThincrustBread();
-			bread6 = new Cheese(bread6);
-			bread6 = new Olives(bread6);
-			batch_6.add(bread6);
+			Bread thincrustBreadCheeseOlives = new ThincrustBread();
+			thincrustBreadCheeseOlives = new Cheese(thincrustBreadCheeseOlives);
+			thincrustBreadCheeseOlives = new Olives(thincrustBreadCheeseOlives);
+			breads.add(thincrustBreadCheeseOlives);
 		}
-		breads.addAll(batch_1);
-		breads.addAll(batch_2);
-		breads.addAll(batch_3);
-		breads.addAll(batch_4);
-		breads.addAll(batch_5);
-		breads.addAll(batch_6);
 	}
 
 	/**
@@ -81,7 +69,7 @@ public class BreadStore {
 	public boolean sell(Bread bread) {
 		for (int i = 0; i < breads.size(); i++) {
 			if (breads.get(i).cost() == bread.cost()) {
-				System.out.println("Sold: " + breads.get(i).getDescription() + " at " + breads.get(i).cost());
+				System.out.println("Sold: " + breads.get(i).getDescription() + " at $ " + breads.get(i).cost());
 				breads.remove(i);
 				return true;
 			}
@@ -107,11 +95,8 @@ public class BreadStore {
 	 */
 	public List<Bread> sort(boolean order) {
 		List<Bread> toSort = new ArrayList<>(breads);
-		if (order) {
-			toSort.sort(Comparator.comparingDouble(Bread::cost));
-		} else {
-			toSort.sort(Comparator.comparingDouble(Bread::cost).reversed());
-		}
+		toSort.sort(order ? Comparator.comparingDouble(Bread::cost) : 
+				Comparator.comparingDouble(Bread::cost).reversed());
         return toSort;
     }
 
@@ -135,40 +120,54 @@ public class BreadStore {
 		* - In ra nhiều nhất 10 cái bánh mỳ có giá thấp nhất còn trong cửa hàng.
 		*/
 		/* TODO */
+		// Grand opening
 		BreadStore breadStore = new BreadStore();
 		breadStore.init();
+
+		Bread thincrustBreadOlives = new ThincrustBread();
+		thincrustBreadOlives = new Olives(thincrustBreadOlives);
+
+		Bread thincrustBreadCheese = new ThincrustBread();
+		thincrustBreadCheese = new Cheese(thincrustBreadCheese);
+
+		Bread thickcrustBreadCheese = new ThickcrustBread();
+		thickcrustBreadCheese = new Cheese(thickcrustBreadCheese);
+
+		Bread thickcrustBreadOlives = new ThickcrustBread();
+		thickcrustBreadOlives = new Olives(thickcrustBreadOlives);
+
+		// Adding some breads
+		breadStore.add(thincrustBreadOlives);
+		breadStore.add(thickcrustBreadOlives);
+		breadStore.add(thickcrustBreadCheese);
+		breadStore.add(thincrustBreadCheese);
+
+		// Selling some breads
+		System.out.println("Store in business: ");
+		breadStore.sell(thincrustBreadOlives);
+		breadStore.sell(thickcrustBreadOlives);
+		breadStore.sell(thickcrustBreadCheese);
+		breadStore.sell(thincrustBreadCheese);
+		breadStore.sell(thincrustBreadCheese);
+		breadStore.sell(thincrustBreadCheese);
+		breadStore.sell(thincrustBreadCheese);
+		breadStore.sell(thincrustBreadCheese);
+		breadStore.sell(thincrustBreadCheese);
+		breadStore.sell(thincrustBreadCheese);
+
 		List<Bread> sorted = breadStore.sort(true);
-		breadStore.print();
+
+		// Printing out breads sorted by price increasing
+		System.out.println("Printing out breads sorted by price increasing: ");
 		for (Bread bread : sorted) {
-			System.out.println(bread.getDescription() + " " + bread.cost());
+			System.out.println(bread.getDescription() + " $ " + bread.cost());
 		}
-		Bread bread5 = new ThincrustBread();
-		bread5 = new Olives(bread5);
 
-		Bread bread6 = new ThincrustBread();
-		bread6 = new Cheese(bread6);
-
-		Bread bread1 = new ThickcrustBread();
-		bread1 = new Cheese(bread1);
-
-		Bread bread2 = new ThickcrustBread();
-		bread2 = new Olives(bread2);
-
-		breadStore.sell(bread5);
-		breadStore.sell(bread2);
-		breadStore.sell(bread1);
-		breadStore.sell(bread6);
-		breadStore.sell(bread6);
-		breadStore.sell(bread6);
-		breadStore.sell(bread6);
-		breadStore.sell(bread6);
-		breadStore.sell(bread6);
-
-		breadStore.print();
-
+		// Cheapest 10 breads left
+		System.out.println("Cheapest 10 breads left: ");
 		List<Bread> filtered = breadStore.filter(10, true);
 		for (Bread bread : filtered) {
-			System.out.println(bread.getDescription() + " " + bread.cost());
+			System.out.println(bread.getDescription() + " $ " + bread.cost());
 		}
 	}
 }

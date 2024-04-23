@@ -55,15 +55,7 @@ public class BookManager {
      * @param book
      */
     public void remove(Book book) {
-        Iterator<Book> iterator = bookList.iterator();
-        int index = 0;
-
-        while (iterator.hasNext()) {
-            if (iterator.next().equals(book)) {
-                bookList.remove(index);
-            }
-            index++;
-        }
+        bookList.removeIf(thisBook -> thisBook.equals(book));
     }
 
     /**

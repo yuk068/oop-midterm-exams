@@ -27,11 +27,12 @@ public class App {
           <TenSinhVien_MaSinhVien_BookManager>.zip (Ví dụ, NguyenVanA_123456_BookManager.zip),
           nộp lên classroom.
          */
-
+        // Test sort
         testSortIncreasingGenreAndPrice();
         testSortDecreasingGenreAndPrice();
         testPriceOfBooksIncreasing();
         testPriceOfBooksDecreasing();
+        // Test filter
         testFilterBooksHighestPrice();
         testFilterBooksLowestPrice();
         testFilterBooksOfAuthor();

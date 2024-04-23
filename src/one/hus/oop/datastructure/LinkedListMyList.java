@@ -11,6 +11,7 @@ public class LinkedListMyList extends AbstractMyList {
     public LinkedListMyList() {
         this.head = null;
         this.tail = null;
+        size = 0;
     }
 
     @Override
@@ -83,25 +84,20 @@ public class LinkedListMyList extends AbstractMyList {
      */
     @Override
     public void insertAtPos(int value, int index) {
-        Node temp = new Node(value);
-        if (index == 1) {
+        checkBoundaries(index, size);
+        if (index == 0) {
             insertAtStart(value);
+        } else if (index >= size) {
+            insertAtEnd(value);
         } else {
-            Node current = head;
-            int currPosition = 1;
-            while (current != null && currPosition < index) {
-                current = current.next;
-                currPosition++;
-            }
-            if (current == null) {
-                insertAtEnd(value);
-            }
-            else {
-                temp.next = current;
-                temp.prev = current.prev;
-                current.prev.next = temp;
-                current.prev = temp;
-            }
+            Node temp = new Node(value);
+            Node current = getNodeByIndex(index);
+
+            temp.setNext(current);
+            temp.setPrev(current.getPrev());
+            current.getPrev().setNext(temp);
+            current.setPrev(temp);
+
             size++;
         }
     }
@@ -120,10 +116,16 @@ public class LinkedListMyList extends AbstractMyList {
         } else if (index == size - 1) {
             removeAtEnd();
         } else {
-            Node prevNode = getNodeByIndex(index - 1);
-            Node nextNode = getNodeByIndex(index + 1);
+            Node nodeToRemove = getNodeByIndex(index);
+            Node prevNode = nodeToRemove.getPrev();
+            Node nextNode = nodeToRemove.getNext();
+
             prevNode.setNext(nextNode);
             nextNode.setPrev(prevNode);
+
+            nodeToRemove.setPrev(null);
+            nodeToRemove.setNext(null);
+
             size--;
         }
     }
@@ -133,13 +135,12 @@ public class LinkedListMyList extends AbstractMyList {
         if (head == tail) {
             head = null;
             tail = null;
-            size--;
-            return;
+        } else {
+            Node toRemove = head;
+            head = head.getNext();
+            head.setPrev(null);
+            toRemove.setNext(null);
         }
-        Node toRemove = head;
-        head = head.getNext();
-        head.setPrev(null);
-        toRemove.setNext(null);
         size--;
     }
 
@@ -148,13 +149,12 @@ public class LinkedListMyList extends AbstractMyList {
         if (head == tail) {
             head = null;
             tail = null;
-            size--;
-            return;
+        } else {
+            Node toRemove = tail;
+            tail = tail.getPrev();
+            tail.setNext(null);
+            toRemove.setPrev(null);
         }
-        Node toRemove = tail;
-        tail = tail.getPrev();
-        tail.setNext(null);
-        toRemove.setPrev(null);
         size--;
     }
 
@@ -164,11 +164,20 @@ public class LinkedListMyList extends AbstractMyList {
      * @return
      */
     private Node getNodeByIndex(int index) {
-        Node target = head;
-        for (int i = 0; i < index; i++) {
-            target = target.getNext();
+        checkBoundaries(index, size - 1);
+        Node current;
+        if (index < size / 2) {
+            current = head;
+            for (int i = 0; i < index; i++) {
+                current = current.getNext();
+            }
+        } else {
+            current = tail;
+            for (int i = size - 1; i > index; i--) {
+                current = current.getPrev();
+            }
         }
-        return target;
+        return current;
     }
 
     /**

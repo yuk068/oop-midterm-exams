@@ -1,5 +1,7 @@
 package one.hus.oop.datastructure;
 
+import java.util.Arrays;
+
 public class ArrayMyList extends AbstractMyList {
     private static final int DEFAULT_CAPACITY = 16;
     private int[] data;
@@ -114,7 +116,7 @@ public class ArrayMyList extends AbstractMyList {
      */
     @Override
     public int[] toArray() {
-        return data;
+        return Arrays.copyOf(data, size);
     }
 
 }
