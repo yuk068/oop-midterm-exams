@@ -13,7 +13,7 @@ public class Student implements StudentComparable {
 
     @Override
     public int compareTo(Student another) {
-        return Double.compare(getAverageGrade(), another.getAverageGrade());
+        return Double.compare(this.getAverageGrade(), another.getAverageGrade());
     }
 
     public static class StudentBuilder {
@@ -110,8 +110,8 @@ public class Student implements StudentComparable {
                 ": " + lastname +
                 " " +  firstname +
                 ", year: " + yearOfBirth +
-                "(MAT/PHY/CHE:" + String.format("%.1f/%.1f/%.1f", mathsGrade, physicsGrade, chemistryGrade) +
-                ")Avg: " + String.format("%.1f", getAverageGrade()) + "]";
+                " (MAT/PHY/CHE:" + String.format("%.1f/%.1f/%.1f", mathsGrade, physicsGrade, chemistryGrade) +
+                ") Avg: " + String.format("%.1f", getAverageGrade()) + "]";
     }
 
 }

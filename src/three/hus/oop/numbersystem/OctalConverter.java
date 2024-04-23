@@ -1,5 +1,7 @@
 package three.hus.oop.numbersystem;
 
+import java.math.BigInteger;
+
 public class OctalConverter extends AbstractNumberConverter {
     public OctalConverter(OriginalNumber originalNumber) {
         super(originalNumber);
@@ -17,16 +19,19 @@ public class OctalConverter extends AbstractNumberConverter {
      */
     @Override
     public String decimalTo(String decimal) {
-        int decimalValue = Integer.parseInt(decimal);
+        BigInteger decimalValue = new BigInteger(decimal);
         StringBuilder result = new StringBuilder();
-        if (decimalValue == 0) {
+
+        if (decimalValue.equals(BigInteger.ZERO)) {
             return "0";
         }
-        while (decimalValue > 0) {
-            int remainder = decimalValue % 8;
+
+        while (!decimalValue.equals(BigInteger.ZERO)) {
+            BigInteger[] quotientAndRemainder = decimalValue.divideAndRemainder(BigInteger.valueOf(8));
+            int remainder = quotientAndRemainder[1].intValue();
             char digit = (char) (remainder + '0');
             result.insert(0, digit);
-            decimalValue /= 8;
+            decimalValue = quotientAndRemainder[0];
         }
 
         return result.toString();

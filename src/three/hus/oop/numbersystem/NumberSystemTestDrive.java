@@ -33,22 +33,26 @@ public class NumberSystemTestDrive {
           <TenSinhVien_MaSinhVien_NumberSystemConverter>.zip (Ví dụ, NguyenVanA_123456_NumberSystemConverter.zip),
           nộp lên classroom.
          */
-        OriginalNumber number = new OriginalNumber("CAFE", 16);
+        for (int i = 1; i <= 3; i++) {
+            System.out.println("Iteration " + i + ": ");
+            testNumberConversion();
+            System.out.println();
+        }
+    }
+
+    public static void testNumberConversion() {
+        OriginalNumber number =
+                RandomOriginalNumberGenerator.generateOriginalNumber(2, 16, 10 , 30);
         NumberConverter binaryConverter = new BinaryConverter(number);
         NumberConverter hexaConverter = new HexadecimalConverter(number);
         NumberConverter octalConverter = new OctalConverter(number);
 
+        System.out.println("Original number: " + number.getNumberPresentation() + "; Radix: " + number.getRadix());
+        System.out.print("Binary:   ");
         binaryConverter.display();
-        binaryConverter.display();
-        hexaConverter.display();
-        System.out.println(number.getNumberPresentation() + " (The actual original)");
+        System.out.print("Octal :   ");
         octalConverter.display();
-        binaryConverter.display();
+        System.out.print("Hexa  :   ");
         hexaConverter.display();
-        octalConverter.display();
-        binaryConverter.display();
-        System.out.println(number.getNumberPresentation() + " (The actual original)");
-        hexaConverter.display();
-        System.out.println(number.getNumberPresentation() + " (The actual original)");
     }
 }

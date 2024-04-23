@@ -1,5 +1,7 @@
 package three.hus.oop.numbersystem;
 
+import java.math.BigInteger;
+
 public abstract class AbstractNumberConverter implements NumberConverter {
     protected OriginalNumber originalNumber;  // Số gốc
     protected String convertedNumber;         // Số được chuyển đổi theo cơ số nào đó từ số gốc
@@ -33,14 +35,14 @@ public abstract class AbstractNumberConverter implements NumberConverter {
     public String toDecimal() {
         String original = this.originalNumber.getNumberPresentation();
         int radix = this.originalNumber.getRadix();
-        int decimalValue = 0;
+        BigInteger decimalValue = BigInteger.ZERO;
         for (int i = 0; i < original.length(); i++) {
             int digitValue = original.charAt(i) -
                     (Character.isDigit(original.charAt(i)) ? '0' : ('A' - 10));
-            decimalValue = decimalValue * radix + digitValue;
+            decimalValue = decimalValue.multiply(BigInteger.valueOf(radix)).add(BigInteger.valueOf(digitValue));
         }
 
-        return String.valueOf(decimalValue);
+        return decimalValue.toString();
     }
 
     /**

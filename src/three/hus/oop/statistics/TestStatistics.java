@@ -14,7 +14,6 @@ public class TestStatistics {
          đặt tên là <Ten_MaSinhVien_Statistics>.zip (ví dụ, NguyenVanA_123456_Statistics.zip) và nộp lên classroom.
          */
         testArrayDataSet();
-        System.out.println();
         testListDataSet();
     }
 
@@ -26,6 +25,7 @@ public class TestStatistics {
          - Xóa một phần tử ở đầu tập dữ liệu và một phần tử ở cuối tập dữ liệu.
          In ra các dữ liệu thống kê về tập dữ liệu (tập dữ liệu, cỡ mẫu, max, min, kỳ vọng, phương sai, rank, median).
          */
+        System.out.println("ArrayDataSet Test:");
         Random random = new Random();
         DataSet dataSet = new ArrayDataSet();
         int size = random.nextInt(11) + 10;
@@ -50,6 +50,7 @@ public class TestStatistics {
          - Xóa một phần tử ở đầu tập dữ liệu và một phần tử ở cuối tập dữ liệu.
          In ra các dữ liệu thống kê về tập dữ liệu (tập dữ liệu, cỡ mẫu, max, min, kỳ vọng, phương sai, rank, median).
          */
+        System.out.println("ListDataSet Test:");
         Random random = new Random();
         DataSet dataSet = new ListDataSet();
         int size = random.nextInt(11) + 10;

@@ -1,5 +1,7 @@
 package three.hus.oop.numbersystem;
 
+import java.math.BigInteger;
+
 public class HexadecimalConverter extends AbstractNumberConverter {
     public HexadecimalConverter(OriginalNumber originalNumber) {
         super(originalNumber);
@@ -16,16 +18,19 @@ public class HexadecimalConverter extends AbstractNumberConverter {
      */
     @Override
     public String decimalTo(String decimal) {
-        int decimalValue = Integer.parseInt(decimal);
+        BigInteger decimalValue = new BigInteger(decimal);
         StringBuilder result = new StringBuilder();
-        if (decimalValue == 0) {
+
+        if (decimalValue.equals(BigInteger.ZERO)) {
             return "0";
         }
-        while (decimalValue > 0) {
-            int remainder = decimalValue % 16;
+
+        while (!decimalValue.equals(BigInteger.ZERO)) {
+            BigInteger[] quotientAndRemainder = decimalValue.divideAndRemainder(BigInteger.valueOf(16));
+            int remainder = quotientAndRemainder[1].intValue();
             char digit = (char) (remainder < 10 ? remainder + '0' : remainder - 10 + 'A');
             result.insert(0, digit);
-            decimalValue /= 16;
+            decimalValue = quotientAndRemainder[0];
         }
 
         return result.toString();
