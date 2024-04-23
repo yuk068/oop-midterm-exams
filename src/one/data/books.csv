@@ -1,0 +1,113 @@
+title,author,genre,pages,price,publisher
+Fundamentals of Wavelets,Goswami Jaideva,signal_processing,228,20.5,Wiley
+Data Smart,Foreman John,data_science,235,80,Wiley
+God Created the Integers,Hawking Stephen,mathematics,197,97.5,Penguin
+Superfreakonomics,Dubner Stephen,economics,179,45.6,HarperCollins
+Orientalism,Said Edward,history,197,37.9,Penguin
+Nature of Statistical Learning Theory,Vapnik Vladimir,data_science,230,80.3,Springer
+Integration of the Indian States,Menon, V P,history,217,94.7,Orient Blackswan
+Drunkards Walk,Mlodinow Leonard,science,197,34.7,Penguin
+Image Processing and Mathematical Morphology,Shih Frank,signal_processing,241,34.4,CRC
+How to Think Like Sherlock Holmes,Konnikova Maria,psychology,240,48.4,Penguin
+Data Scientists at Work,Sebastian Gutierrez,data_science,230,29.4,Apress
+Slaughterhouse Five,Vonnegut Kurt,fiction,198,94.6,Random House
+Birth of a Theorem,Villani Cedric,mathematics,234,58.4,Bodley Head
+Structure and Interpretation of Computer Programs,Sussman Gerald,computer_science,240,43.5,MIT Press
+Age of Wrath,Eraly Abraham,history,238,32.6,Penguin
+Trial,Kafka Frank,fiction,198,94.3,Random House
+Statistical Decision Theory,Pratt John,data_science,236,29.3,MIT Press
+Data Mining Handbook,Nisbet Robert,data_science,242,12.4,Apress
+New Machiavelli,Wells HG,fiction,180,84.4,Penguin
+Physics and Philosophy,Heisenberg Werner,science,197,93.5,Penguin
+Making Software,Oram Andy,computer_science,232,32.5,OReilly
+Analysis Vol I,Tao Terence,mathematics,248,43.5,HBA
+Machine Learning for Hackers,Conway Drew,data_science,233,4.5,OReilly
+Signal and the Noise,Silver Nate,data_science,233,54.9,Penguin
+Python for Data Analysis,McKinney Wes,data_science,233,49.5,OReilly
+Introduction to Algorithms,Cormen Thomas,computer_science,234,32.6,MIT Press
+Beautiful and the Damned,Deb Siddhartha,nonfiction,198,90.4,Penguin
+Outsider,Camus Albert,fiction,198,64.4,Penguin
+Complete Sherlock Holmes Vol I,Doyle Arthur Conan,fiction,176,83.5,Random House
+Complete Sherlock Holmes Vol II,Doyle Arthur Conan,fiction,176,92.4,Random House
+Wealth of Nations,Smith Adam,economics,175,98.3,Random House
+Pillars of the Earth,Follett Ken,fiction,176,93.4,Random House
+Mein Kampf,Hitler Adolf,nonfiction,212,45.8,Rupa
+Tao of Physics,Capra Fritjof,science,179,79.4,Penguin
+Surely You are Joking Mr Feynman,Feynman Richard,science,198,32.5,Random House
+Farewell to Arms,Hemingway Ernest,fiction,179,30.3,Rupa
+Veteran,Forsyth Frederick,fiction,177,72.3,Transworld
+False Impressions,Archer Jeffery,fiction,177,2.3,Pan
+Last Lecture,Pausch Randy,nonfiction,197,3.5,Hyperion
+Return of the Primitive,Rand Ayn,philosophy,202,1.6,Penguin
+Jurassic Park,Crichton Michael,fiction,174,34.6,Random House
+Russian Journal,Steinbeck John,nonfiction,196,32.9,Penguin
+Tales of Mystery and Imagination,Poe Edgar Allen,fiction,172,32.6,HarperCollins
+Freakonomics,Dubner Stephen,economics,197,93.5,Penguin
+Hidden Connections,Capra Fritjof,science,197,32.5,HarperCollins
+Story of Philosophy,Durant Will,philosophy,170,43.9,Pocket
+Asami Asami,Deshpande PL,fiction,205,49.4,Mauj
+Journal of a Novel,Steinbeck John,fiction,196,32.5,Penguin
+Once There Was a War,Steinbeck John,nonfiction,196,74.5,Penguin
+Moon is Down,Steinbeck John,fiction,196,15.9,Penguin
+Brethren,Grisham John,fiction,174,93.6,Random House
+In a Free State,Naipaul VS,fiction,196,32.5,Rupa
+Catch 22,Heller Joseph,fiction,178,58.9,Random House
+Complete Mastermind,BBC,nonfiction,178,53.9,BBC
+Dylan on Dylan,Dylan Bob,nonfiction,197,32,Random House
+Soft Computing and Intelligent Systems,Gupta Madan,data_science,242,32.4,Elsevier
+Textbook of Economic Theory,Stonier Alfred,economics,242,78.4,Pearson
+Econometric Analysis,Greene WH,economics,242,74.9,Pearson
+Learning OpenCV,Bradsky Gary,data_science,232,43.5,OReilly
+Data Structures Using C,Tanenbaum Andrew,computer_science,235,93.4,Prentice Hall
+Computer Vision A Modern Approach,Forsyth David,data_science,255,38.3,Pearson
+Principles of Communication Systems,Taub Schilling,computer_science,240,32.9,TMH
+Let Us C,Kanetkar Yashwant,computer_science,213,32.4,Prentice Hall
+Amulet of Samarkand,Stroud Jonathan,fiction,179,84.6,Random House
+Crime and Punishment,Dostoevsky Fyodor,fiction,180,41.9,Penguin
+Angels and Demons,Brown Dan,fiction,178,43.5,Random House
+Argumentative Indian,Sen Amartya,nonfiction,209,84.9,Picador
+Sea of Poppies,Ghosh Amitav,fiction,197,43.5,Penguin
+Idea of Justice,Sen Amartya,nonfiction,212,32.9,Penguin
+Raisin in the Sun,Hansberry Lorraine,fiction,175,14.6,Penguin
+All the Presidents Men,Woodward Bob,history,177,32.3,Random House
+Prisoner of Birth,Archer Jeffery,fiction,176,18.4,Pan
+Scoop,Nayar Kuldip,history,216,43.3,HarperCollins
+Ahe Manohar Tari,Deshpande Sunita,nonfiction,213,43.9,Mauj
+Last Mughal,Dalrymple William,history,199,32.9,Penguin
+Social Choice and Welfare Vol 39 No1,Various,economics,235,4.9,Springer
+Radiowaril Bhashane and Shrutika,Deshpande PL,nonfiction,213,4.3,Mauj
+Gun Gayin Awadi,Deshpande PL,nonfiction,212,32.9,Mauj
+Aghal Paghal,Deshpande PL,nonfiction,212,93.3,Mauj
+Maqta-e-Ghalib,Garg Sanjay,fiction,221,78.4,Mauj
+Manasa,Kale VP,nonfiction,213,93.5,Mauj
+India from Midnight to Milennium,Tharoor Shashi,history,198,32.8,Penguin
+Great Indian Novel,Tharoor Shashi,fiction,198,43.3,Penguin
+O Jerusalem,Lapierre Dominique,history,217,83.4,vikas
+City of Joy,Lapierre Dominique,fiction,177,62.4,vikas
+Freedom at Midnight,Lapierre Dominique,history,167,95.4,vikas
+Winter of Our Discontent,Steinbeck John,fiction,196,83.4,Penguin
+On Education,Russell Bertrand,philosophy,203,95.3,Routledge
+Free Will,Harris Sam,philosophy,203,82.4,FreePress
+Bookless in Baghdad,Tharoor Shashi,nonfiction,206,34.8,Penguin
+Theory of Everything,Hawking Stephen,science,217,5.3,Jaico
+New Markets and Other Essays,Drucker Peter,economics,176,34.5,Penguin
+Electric Universe,Bodanis David,science,201,82.3,Penguin
+Hunchback of Notre Dame,Hugo Victor,fiction,175,34.8,Random House
+Burning Bright,Steinbeck John,fiction,175,92.4,Penguin
+Age of Discontuinity,Drucker Peter,economics,178,73.4,Random House
+Doctor in the Nude,Gordon Richard,fiction,179,32.4,Penguin
+Down and Out in Paris and London,Orwell George,nonfiction,179,32.4,Penguin
+Identity and Violence,Sen Amartya,philosophy,219,45.5,Penguin
+Beyond the Three Seas,Dalrymple William,history,197,54.9,Random House
+Maughams Collected Short Stories Vol 3,Maugham William S,fiction,171,83.4,Vintage
+Ashenden of The British Agent,Maugham William S,fiction,160,34.6,Vintage
+Zen and The Art of Motorcycle Maintenance,Pirsig Robert,philosophy,172,32.5,Vintage
+Great War for Civilization,Fisk Robert,history,197,13.5,HarperCollins
+We the Living,Rand Ayn,fiction,178,84.4,Penguin
+Artist and the Mathematician,Aczel Amir,science,186,83.4,HighStakes
+History of Western Philosophy,Russell Bertrand,philosophy,213,32.5,Routledge
+Rationality and Freedom,Sen Amartya,economics,213,83.4,Springer
+Clash of Civilizations and Remaking of the World Order,Huntington Samuel,history,228,32.4,SimonAndSchuster
+Uncommon Wisdom,Capra, Fritjof,nonfiction,197,83.4,Fontana
+One,Bach Richard,nonfiction,172,54.8,Dell
+To Sir With Love,Braithwaite,fiction,197,32.9,Penguin
